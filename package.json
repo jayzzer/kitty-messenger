@@ -1,0 +1,26 @@
+{
+  "name": "kitty-messenger",
+  "version": "1.0.0",
+  "description": "Simple messenger with kitties",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jayzzer/kitty-messenger.git"
+  },
+  "author": "Sosisochnaya Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jayzzer/kitty-messenger/issues"
+  },
+  "homepage": "https://github.com/jayzzer/kitty-messenger#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "mongoose": "^5.3.9",
+    "nunjucks": "^3.1.3"
+  }
+}
