@@ -5,9 +5,31 @@ const bodyParser = require('body-parser');
 const nunjucks = require('nunjucks');
 
 const mongoose = require('mongoose');
+// const MongoStore = require('connect-mongo');
 
 const config = require('./config');
 
+mongoose.connect('mongodb://localhost/dataBase', err => {
+    if (err) throw err;
+
+    console.log('MongoDB connected');
+});
+
+// app.use (
+//     session ({
+//         secret: config.SESSION_SECRET,
+//         key: 'sid',
+//         cookie: {
+//             path: '/',
+//             maxAge: null
+//         },
+//         resave: true,
+//         saveUninitialized: false,
+//         store: new MongoStore ({
+//             mongooseConnection: mongoose.connection
+//         })
+//     })
+// );
 
 app.use(
     express.static(__dirname + '/src'),

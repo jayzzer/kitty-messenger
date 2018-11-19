@@ -4,9 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Kitty Messenger</title>
+    <title>Document</title>
+
+    {# <link rel="stylesheet" href="/css/style.css"> #}
 </head>
 <body>
-    <h1>{{ message }}</h1>
-</body>
+    <div class="col-6">
+        <h2>Регистрация</h2>
+        <form method="POST" action="/user">
+            <div class="form-element">
+                <label for="login">login</label>
+                <input type="text" id="login" name="login" required>
+            </div>
+            
+            <div class="form-element">
+                <label for="password">Пароль</label>
+                <input type="text" id="password" name="password" required>
+            </div>
+            
+            <div class="form-element">
+                <label for="phone">Телефон</label>
+                <input type="text" id="phone" name="phone" required>
+            </div>
+
+            <button type="submit">Зарегистрировать</button>
+        </form>
+    </div>
 </html>

@@ -1,8 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
-const mainPresenter = require('./app/presenters/main');
+const mainController = require('./app/presenters/main');
 
-router.get('/', mainPresenter.getMainPage);
+router.get('/', mainController.getMainPage);
+
+router.post('/user', mainController.addNewUser);
 
 module.exports = router;
