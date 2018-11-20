@@ -1,0 +1,80 @@
+/*  Основной блок */
+#base{
+    position: fixed;
+    top:50%;
+    left:50%;
+    width:50%;
+    height: 50%;
+    max-width: 400px;
+    max-height: 400px;
+    transform:translate(-50%,-50%); /*смещение относительно блока*/
+    /*margin: -75px 0 0 -100px;*/
+    background-image: url('../img/Avatar_1.png');
+    background-size: 100% 100%;
+
+}
+/*  Шрифты  */
+.banner_1{
+    color: #FFFFFF;    
+    text-align: center;
+}
+.norm_text,[label]{ 
+    color: #FFFFFF; 
+    text-align: center;
+}
+
+
+/*  Отступ перед 1 блоком  */
+#byka{
+    margin-top: 18%;
+}
+/*  Кнопа  */
+#button{
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 27px;
+
+    /*position: fixed;
+    margin: 0 50%;
+    transform:translate(-50%,0);
+    float: left;*/
+
+    /*line-height: 50px; высота кнопы
+    width: 50px;
+    height: 150px;*/
+    /*display: block;*/ 
+
+    text-decoration: none;
+    text-align: center;
+    font-family:cursive, Bradley Hand;
+    color: rgb(8, 68, 63);
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px;
+    /*Градиент тени сверху
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.075) inset;*/
+    
+}
+/*  Блок для кнопы  */
+.div_for_button{
+    width: 100%;
+    text-align: center;
+    float: left;
+  
+}
+/*  Блок для окна ввода  */
+.div_for_input{
+    width:100%;
+    text-align: center;
+    float: left;
+}
+/*  Окошко ввода  */
+.input{
+    width:70%;
+    height: 25px;
+    max-width: 200px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 3px;
+}

@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+/*  Обычный текст  */
+.norm_text,[label]{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    width: 100%;
+    float: left;
+
+}
+/*  Ссылки  */
+.link{
+    width: 100%;
+    text-align: center;
+    float: left;
+    /*text-decoration: none;*/
+    /*font: normal 16px  Georgia;*/
+    color: rgb(255, 255, 255);   
+}
+/*  Заголовок 1  */
+.banner_1{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family:cursive, Bradley Hand;
+    font-size: 28px;
+    width: 100%;
+    float: left;
+}
+.banner_2{
+    padding-top: 3px;
+    padding-left: 3px;
+    font-family:cursive, Bradley Hand;
+    font-size: 16px;
+    width: 100%;
+    float: left;
+}
