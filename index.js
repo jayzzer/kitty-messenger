@@ -15,6 +15,7 @@ mongoose.connect('mongodb://localhost/dataBase', err => {
     console.log('MongoDB connected');
 });
 
+
 // app.use (
 //     session ({
 //         secret: config.SESSION_SECRET,

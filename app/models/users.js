@@ -5,11 +5,15 @@ const bcrypt = require('bcrypt');
 let UserSchema = new Schema ({
     login: {
         type: String, 
-        unique: true, 
+        unique: true,
         index: true
     },
     password: String,
-    phone: String
+    phone: {
+        type:String,
+        unique: true,
+        index: true
+    }
 });
 
 let User = module.exports = mongoose.model('User', UserSchema);
@@ -21,4 +25,8 @@ module.exports.createUser = (newUser, callback) => {
             newUser.save(callback);
         });
     });
+}
+
+module.exports.checkPhone = (phonee, callback) => {
+    User.find({'phone';phonee})
 }
