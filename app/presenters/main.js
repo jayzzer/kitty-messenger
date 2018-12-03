@@ -6,13 +6,12 @@ exports.getMainPage = (req, res) => {
     res.render(`index.html`);
 }
 
-exports.ValidationEnteredData = (req, res) => {
-    const Phone = req.body.phone;
-    const password = req.body.password;
-    const repeatPassword = req.body.repeatPassword;
-    var dbCursor=db.users.find({phone:Phone})
-    console.log(dbCursor);
-    if (dbCursor!=null&&password!=repeatPassword) {
+ValidationEnteredData = (phone,login,password,repeatPassword) => {
+    var cursorPhone=Users.find({"phone":"1"});
+    var cursorLogin=Users.find({"login":"1"});
+    console.log(cursorPhone.phone);
+    console.log(cursorLogin.login);  
+    if (cursorPhone.phone!=phone&&cursorLogin.login!=login&&password==repeatPassword) {
       return true;
     }
     return false;
@@ -23,13 +22,8 @@ exports.addNewUser = (req, res) => {
     const login = req.body.login;
     const password = req.body.password;
     const phone = req.body.phone;
-    const repeatPassword = req.body.repeatPassword;
-
-    
-    var cursorPhone=dataBase.users.find({'phone':phone});
-    var cursorLogin=dataBase.users.find({'login':login});
-    console.log(cursorPhone);
-    if (cursorPhone.phone!=phone&&cursorLogin.login!=login&&password==repeatPassword){
+    const repeatPassword = req.body.repeatPassword; 
+    if (ValidationEnteredData(phone,login,password,repeatPassword)){
         const newUser = new Users ({
          login: login,
          phone: phone,

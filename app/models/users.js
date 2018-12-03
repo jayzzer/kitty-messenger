@@ -5,14 +5,14 @@ const bcrypt = require('bcrypt');
 let UserSchema = new Schema ({
     login: {
         type: String, 
-        unique: true,
-        index: true
+        //unique: true,
+        //index: true
     },
     password: String,
     phone: {
         type:String,
-        unique: true,
-        index: true
+        //unique: true,
+        //index: true
     }
 });
 
@@ -27,6 +27,3 @@ module.exports.createUser = (newUser, callback) => {
     });
 }
 
-module.exports.checkPhone = (phonee, callback) => {
-    User.find({'phone';phonee})
-}
