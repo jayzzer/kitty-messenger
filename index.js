@@ -9,11 +9,7 @@ const mongoose = require('mongoose');
 
 const config = require('./config');
 
-mongoose.connect('mongodb://localhost/dataBase', err => {
-    if (err) throw err;
-
-    console.log('MongoDB connected');
-});
+mongoose.connect('mongodb://localhost/dataBase');
 
 
 // app.use (
